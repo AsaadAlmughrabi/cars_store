@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Car Detail{% endblock title %}
+{% block content %}
+<div class="card">
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREwJcNf4M2p2oxeCBtOlYtv3-iH4qf5B-hA&s" alt="car img"></div>
+    <div class="info">
+        <h3>Buyer: {{ car.buyer }}</h3>
+        <h1>Model: {{ car.model }}</h1>
+        <h2>Brand: {{ car.brand }}</h2>
+        <h3>Price: {{ car.price }}</h3>
+        <h3>
+            Bought: 
+            {% if car.is_bought %}
+                Yes
+            {% else %}
+                No
+            {% endif %}
+        </h3>
+        <h3>Buy Time: {{ car.buy_time }}</h3>
+        <button class="boton-elegante"><a class="a" href="{% url 'car_update' pk=car.pk %}">Update</a></button>
+        <button class="boton-elegante"><a class="a" href="{% url 'car_delete' pk=car.pk %}">Delete</a></button>
+    </div>
+</div>
+{% endblock %}

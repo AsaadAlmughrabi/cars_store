@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Cars{% endblock title %}
+{% block content %}
+
+<div class="card">
+    <div><img class="img" src="{% static 'images/image.png' %}" alt="Add Car"></div>
+    <div class="info">
+      <h3>Add new Car</h3>
+      <button class="boton-elegante"><a class="a" href="{% url 'car_create' %}">Create</a></button>
+    </div>
+</div>
+
+{% for car in car_objects %}
+<div class="card">
+    <div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQREwJcNf4M2p2oxeCBtOlYtv3-iH4qf5B-hA&s" alt="Car Image"></div>
+    <div class="info">
+      <h3>{{ car.model }}</h3>
+      <p>{{ car.brand }}</p>
+      <p>{{ car.price }}</p>
+      <button class="boton-elegante"><a class="a" href="{% url 'car_detail' pk=car.pk %}">View</a></button>
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}

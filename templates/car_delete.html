@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- <h1>Delete a pet</h1> -->
+
+    <form method="post">
+
+        {% csrf_token %}
+        
+        <h3>Are you sure you want delete {{car.model}} ?</h3>
+        
+        
+        <button class="boton-elegante" type="submit">Delete</button>
+        <button class="boton-elegante"><a class="a" href="{% url 'cars' %}">Cancel</a></button>
+    </form>
+{% endblock content %}

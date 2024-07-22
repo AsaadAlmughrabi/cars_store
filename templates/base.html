@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet " href="{% static 'css/base.css' %}">
+    
+    <title>Books App</title>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="navbar">
+                <div class="logo">
+                    <h1>
+                        <span>Cars</span>
+                    </h1>
+                </div>
+        
+                <div class="navbar-links">
+                    <a href="{% url 'cars' %}">Home</a>
+                    
+
+                   
+                </div>
+            </div>
+        </div>
+    <h1>{% block title %}{% endblock title %}</h1>
+    <main class="main">
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer class="footer">
+        <p class="footer-title">
+          Copyright @ <span> Assad Almughrabi </span>
+        </p>
+    
+      </footer>
+</body>
+</html>

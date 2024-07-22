@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f2f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    background-color: #363131;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-left: 2rem;
+}
+
+.navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0 10px;
+    color: #ffffff;
+    /* Change color as needed */
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #150651;
+}
+
+.logo span {
+    background-image: url("https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+}
+
+.header .navbar .logo h1 {
+    color: #ffffff;
+}
+
+.header .navbar .navbar-links a:hover {
+    color: #150651;
+}
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-style: italic;
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    /* to make a shadow to the
+     content this take 4 property top right(if ineed left just aded-)
+      blur rgba(color)  */
+    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.5s ease;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+
+}
+img{
+    border-radius: 3%;
+}
+.img{
+    
+    width: 100px;
+    height: 100px;
+}
+
+.info {
+    text-align: center;
+
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.info p {
+    font-size: 1.1em;
+    font-weight: 600;
+
+}
+
+.main {
+
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.boton-elegante {
+    padding: 9px 10px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    display: inline-block; /* Make button inline-block to contain the a tag */
+}
+
+.a {
+    color: #ffffff;
+    text-decoration: none; /* Remove underline */
+    display: block;
+    padding: 9px 10px; /* Match padding with .boton-elegante */
+}
+
+.boton-elegante:hover {
+    background-color: #2c2c2c; /* Add a hover effect */
+    color: #ffffff;
+}
+
+.boton-elegante a:hover {
+    color: #ffffff;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #363131;
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .navbar-links a {
+        margin: 0.5rem 0;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links a {
+        font-size: 1em;
+        margin: 0.5rem 0;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+}
